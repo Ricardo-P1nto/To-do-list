@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="bumblebee">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="to do.png">
+
+    <title>To do list</title>
+</head>
+
+<body>
+
+    <!-- Aqui eu meti o contentor em que vai estar o trabalho todo da To Do List -->
+    <div class="container">
+        <!-- Aqui eu adicionei o título e o butão de adicionar as tarefas -->
+        <header>
+            <h1>To do List</h1>
+
+            <div class="input-section">
+                <input id="todo-input" type="text" placeholder="📑 Adicione aqui as suas tarefas.."
+                    class="input w-full max-w-xs" />
+                <button id="add-button" class="btn btn-add ">
+                    <i class="bx bx-plus bx-sm"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Aqui eu adicionei os butões de deletar todos e deletar selecionados -->
+
+        <div class="todos-filter">
+
+            <button id="delete-selected" class="btn btn-ghost delete-selected-btn">
+                Deletar selecionados
+            </button>
+            <button id="delete-all" class="btn btn-ghost delete-all-btn">
+                Deletar todos
+            </button>
+        </div>
+
+
+        <!-- Aqui é onde as tares adicionadas vão aparecer, basicamente a lista de tarefas -->
+        <ul id="all-todos" class="todos-list">
+
+        </ul>
+
+
+        <!-- Aqui eu adicionei a aba onde podemos adicionar filtros para a pesquisa de tarefas -->
+        <div class="filters">
+            <div class="dropdown">
+                <button class="dropbtn">Filtros</button>
+                <div class="dropdown-content">
+                    <a href="#" id="all">Todos</a>
+                    <a href="#" id="rem">Pendentes</a>
+                    <a href="#" id="com">Completos</a>
+                </div>
+            </div>
+
+            <!-- Aqui eu fiz para que no fim da lista tenha dois contadores, um para todas as tarefas e outro para tarefas completas -->
+            <div class="completed-task">
+                <p>Completadas: <span id="c-count">0</span></p>
+            </div>
+            <div class="remaining-task">
+                <p>Todas as Tarefas: <span id="r-count">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
